@@ -3,6 +3,7 @@ from . import compute_max_angle
 
 def gensk97(N):
     # See http://dx.doi.org/10.1016/j.jsb.2006.06.002 and references therein
+    N = int(N)
     h = -1.0 + (2.0/(N-1))*n.arange(0,N)
     theta = n.arccos(h)
     phi_base = n.zeros_like(theta)

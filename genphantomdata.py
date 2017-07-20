@@ -43,7 +43,7 @@ def genphantomdata (N_D, phantompath, ctfparfile):
     srcctf_stack = CTFStack(ctfparfile,mscope_params)
     genctf_stack = GeneratedCTFStack(mscope_params,parfields=['PHI','THETA','PSI','SHX','SHY'])
 
-    TtoF = sincint.gentrunctofull(rad=rad)
+    TtoF = sincint.gentrunctofull(N=N, rad=rad)
     Cmap = n.sort(n.random.random_integers(0,srcctf_stack.get_num_ctfs()-1,N_D))
 
     M = mrc.readMRC(phantompath)
