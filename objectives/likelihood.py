@@ -785,6 +785,7 @@ class UnknownRSKernel:
                     res['kern_timing']['prep_rot_ctf'][idx] = time.time() - tic 
 
                 # Generate the rotated versions of the current image
+                tic = time.time()
                 if self.using_precomp_inplane:
                     if samples_I is None:
                         rotd_sampled = getslices(Img,self.inplane_ops).reshape((N_I_sampled,self.N_T))
